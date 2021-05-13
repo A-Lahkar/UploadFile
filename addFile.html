@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <!-- <title>Guidence educare</title>
+    <h1 style="margin-left: 45%;">Guidence Educare</h1> -->
+
+    <style media="screen">
+        body {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #uploader {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+        #password {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30%;
+            margin: 10px;
+        }
+    </style>
+
+    <progress value="0" max="100" id="uploader">0%</progress>
+    <input type="file" value="uploader" id="fileButton" />
+</head>
+
+<body>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBSJEBIauSNxbiVFxssDVL8fG6BtTkWl38",
+            authDomain: "guidence-2481c.firebaseapp.com",
+            projectId: "guidence-2481c",
+            storageBucket: "guidence-2481c.appspot.com",
+            messagingSenderId: "277563900611",
+            appId: "1:277563900611:web:cb82d97d45e6198c27d876"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+
+    <script src="Script\uploadFiles.js"></script>
+    <script src="Script/FetchImg.js"></script>
+</body>
+
+</html>
