@@ -27,13 +27,27 @@
             width: 50%;
             margin-bottom: 10px;
         }
+
         #password {
             -webkit-appearance: none;
             appearance: none;
             width: 30%;
             margin: 10px;
         }
+        label{
+            
+        }
     </style>
+    <form style="margin: 20px;">
+        <input type="radio" id="Science" name="Subject" value="Science">
+        <label for="Science">Science</label><br>
+
+        <input type="radio" id="Social_Studies" name="Subject" value="Social_Studies">
+        <label for="Social_Studies">Social Studies</label><br>
+
+        <input type="radio" id="mathematics" name="Subject" value="mathematics">
+        <label for="mathematics">Mathematics</label>
+    </form>
 
     <progress value="0" max="100" id="uploader">0%</progress>
     <input type="file" value="uploader" id="fileButton" />
@@ -65,7 +79,7 @@
     </script>
 
     <script src="Script\uploadFiles.js"></script>
-    <script src="Script/FetchImg.js"></script>
+
 </body>
 
 </html>
