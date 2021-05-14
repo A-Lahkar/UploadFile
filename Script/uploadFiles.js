@@ -2,6 +2,22 @@
 var uploader = document.getElementById("uploader");
 var fileButton = document.getElementById("fileButton");
 
+function Science() {
+  document.getElementById("Science").checked = true;
+  document.getElementById("SSt").checked = false;
+  document.getElementById("Maths").checked = false;
+}
+function SSt() {
+  document.getElementById("Science").checked = false;
+  document.getElementById("SSt").checked = true;
+  document.getElementById("Maths").checked = false;
+}
+function Maths() {
+  document.getElementById("Science").checked = false;
+  document.getElementById("SSt").checked = false;
+  document.getElementById("Maths").checked = true;
+}
+
 //Listen for file selection
 fileButton.addEventListener("change", function (e) {
   //Get the file
