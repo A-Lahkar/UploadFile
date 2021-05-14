@@ -24,7 +24,7 @@ function Maths() {
 //Listen for file selection
 fileButton.addEventListener("change", function (e) {
   if (path !== "") {
-
+    
     //Get the file
     var file = e.target.files[0];
 
@@ -33,6 +33,7 @@ fileButton.addEventListener("change", function (e) {
 
     //Upload file
     var task = storageRef.put(file);
+    document.getElementById("error").innerHTML = "";
 
     //Update prgress bar
     task.on(
