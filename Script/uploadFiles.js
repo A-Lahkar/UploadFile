@@ -7,19 +7,19 @@ function Science() {
   document.getElementById("Science").checked = true;
   document.getElementById("SSt").checked = false;
   document.getElementById("Maths").checked = false;
-  path = "Science/";
+  path = "Subjects/Science/";
 }
 function SSt() {
   document.getElementById("Science").checked = false;
   document.getElementById("SSt").checked = true;
   document.getElementById("Maths").checked = false;
-  path = "SSt/";
+  path = "Subjects/SSt/";
 }
 function Maths() {
   document.getElementById("Science").checked = false;
   document.getElementById("SSt").checked = false;
   document.getElementById("Maths").checked = true;
-  path = "maths/";
+  path = "Subjects/Maths/";
 }
 
 //Listen for file selection
@@ -32,7 +32,7 @@ fileButton.addEventListener("change", function (e) {
     var file = e.target.files[0];
 
     //Create a storage ref
-    var storageRef = firebase.storage().ref("Subjects/"+path + file.name); //own names for folder and file
+    var storageRef = firebase.storage().ref(path + file.name); //own names for folder and file
 
     //Upload file
     var task = storageRef.put(file);
