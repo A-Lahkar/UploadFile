@@ -32,7 +32,7 @@ fileButton.addEventListener("change", function (e) {
     var file = e.target.files[0];
 
     //Create a storage ref
-    var storageRef = firebase.storage().ref(path + file.name); //own names for folder and file
+    var storageRef = firebase.storage().ref("Subjects/"+path + file.name); //own names for folder and file
 
     //Upload file
     var task = storageRef.put(file);
