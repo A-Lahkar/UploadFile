@@ -69,7 +69,7 @@ fileButton.addEventListener("change", function (e) {
             Num: num+1,
           });
           
-          firebase.database().ref(path+num).update({
+          firebase.database().ref(path+'items/'+num).update({
               Link: imgUrl,
             });
 
