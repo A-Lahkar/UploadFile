@@ -3,6 +3,10 @@ var uploader = document.getElementById("uploader");
 var fileButton = document.getElementById("fileButton");
 var path = "";
 var imgUrl = "";
+var num
+var database = firebase.database();
+console.log(database)
+
 function Science() {
   document.getElementById("Science").checked = true;
   document.getElementById("SSt").checked = false;
@@ -52,16 +56,24 @@ fileButton.addEventListener("change", function (e) {
       },
 
       function () {
+
+        database.ref(path+'Num').on("value", (data) => {
+          num = data.val()
+          console.log(num)
+        }),
+        
         task.snapshot.ref.getDownloadURL().then(function(url) {
           imgUrl = url;
 
-          File_Name = file.name.split('.')
-          finalFile = File_Name[0]
-
-          firebase.database().ref(path + finalFile).set({
-              Name: file.name,
+          firebase.database().ref(path).update({
+            Num: num+1,
+          });
+          
+          firebase.database().ref(path+num).update({
               Link: imgUrl,
             });
+
+          
             document.getElementById("error").innerHTML ="File Uploaded Successfully";
         });
       },
